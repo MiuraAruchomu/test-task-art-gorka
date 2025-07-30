@@ -1,0 +1,17 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.logo {
+  position: absolute;
+  top: 22px;
+  left: 16px;
+
+  @include mediaTablet {
+    top: 30px;
+    left: 24px;
+  }
+
+  @include mediaDesktop {
+    left: 40px;
+  }
+}

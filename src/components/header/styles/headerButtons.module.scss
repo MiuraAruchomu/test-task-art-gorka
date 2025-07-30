@@ -1,0 +1,11 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.header-buttons {
+  display: none;
+
+  @include mediaTablet {
+    display: flex;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,31 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.another-custom-swiper {
+  margin-top: 52px;
+
+  @include mediaTablet {
+    margin-top: 74px;
+  }
+
+  @include mediaLaptop {
+    margin-top: 64px;
+    cursor: grab;
+  }
+
+  &__mobile {
+    display: flex;
+
+    @include mediaLaptop {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include mediaLaptop {
+      display: flex;
+    }
+  }
+}

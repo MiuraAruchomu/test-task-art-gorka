@@ -1,0 +1,17 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.header-desktop-menu {
+  display: none;
+
+  @include mediaDesktop {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding-left: 172px;
+  }
+
+  &__item {
+    color: $main_grey;
+  }
+}

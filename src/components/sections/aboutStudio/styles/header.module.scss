@@ -1,0 +1,40 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.about-studio-header {
+  @include mediaTablet {
+    padding-top: 144px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mediaLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    color: $main_purple;
+    font-size: 36px;
+    font-weight: 600;
+
+    @include mediaTablet {
+      font-size: 54px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 600px;
+    margin-top: 16px;
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      font-size: 20px;
+    }
+  }
+}

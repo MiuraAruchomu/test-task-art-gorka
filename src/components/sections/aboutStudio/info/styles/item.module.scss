@@ -1,0 +1,72 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.info-item {
+  padding: 20px 0;
+  border-bottom: 1px solid $main_purple_light;
+
+  @include mediaTablet {
+    width: 50%;
+    margin-bottom: 40px;
+    padding: 0;
+    border-bottom: none;
+
+    &:nth-child(odd) {
+      width: calc(50% - 1px);
+      border-right: 1px solid $main_purple_light;
+    }
+
+    &:nth-child(even) {
+      width: calc(50% - 40px);
+      padding-left: 40px;
+    }
+  }
+
+  @include mediaDesktop {
+    margin-bottom: 0;
+
+    &:first-child {
+      width: calc(25% - 1px);
+    }
+
+    &:nth-child(odd) {
+      &:not(:first-child) {
+        width: calc(25% - 41px);
+        padding-left: 40px;
+      }
+    }
+
+    &:nth-child(even) {
+      width: calc(25% - 41px);
+      border-right: 1px solid $main_purple_light;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__title {
+    color: $main_purple;
+    font-size: 32px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      font-size: 40px;
+    }
+  }
+
+  &__subtitle {
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      font-size: 20px;
+    }
+  }
+}

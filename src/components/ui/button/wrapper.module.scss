@@ -1,0 +1,59 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.ui-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &_outline {
+    font-weight: 400;
+    color: $main_purple;
+    border: 1px solid $main_purple_light;
+    transition: all 0.3s ease;
+
+    &:hover {
+      @include mediaLaptop {
+        color: $white;
+        background-color: $main_purple;
+        border: 1px solid $main_purple;
+      }
+    }
+  }
+
+  &_text {
+    color: $main_purple;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &:hover {
+      @include mediaLaptop {
+        color: $main_purple_light;
+      }
+    }
+  }
+
+  &_fill {
+    color: $white;
+    background-color: $main_purple;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      @include mediaLaptop {
+        background-color: $main_purple_light;
+      }
+    }
+  }
+
+  &_medium {
+    width: fit-content;
+    height: fit-content;
+    padding: 16px 40px;
+  }
+
+  &_full {
+    padding: 22px 0;
+    width: 100%;
+  }
+}

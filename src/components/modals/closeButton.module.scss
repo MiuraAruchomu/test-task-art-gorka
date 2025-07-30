@@ -1,0 +1,40 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.modal-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  cursor: pointer;
+
+  &:hover {
+    .modal-close-button__inner {
+      @include mediaLaptop {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+
+  span {
+    width: 16px;
+    height: 1px;
+    background-color: $main_purple;
+
+    &:nth-child(1) {
+      transform: rotate(45deg) translateX(8px) translateY(5.5px);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(-45deg) translateX(-5px) translateY(7px);
+    }
+  }
+}

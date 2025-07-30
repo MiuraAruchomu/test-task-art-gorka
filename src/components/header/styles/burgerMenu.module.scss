@@ -1,0 +1,70 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.burger-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+
+  @include mediaTablet {
+    top: 24px;
+    right: 24px;
+  }
+
+  @include mediaDesktop {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 24px;
+    height: 15px;
+  }
+
+  span {
+    height: 1px;
+    background-color: $main_purple;
+    transition: transform 0.3s ease;
+
+    &:nth-child(1) {
+      width: 24px;
+    }
+
+    &:nth-child(2) {
+      width: 8px;
+    }
+
+    &:nth-child(3) {
+      width: 16px;
+    }
+  }
+
+  &.is-open {
+    span {
+      height: 1px;
+      background-color: $main_purple;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg) translateX(-4px) translateY(4.5px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:nth-child(3) {
+        width: 24px;
+        transform: rotate(45deg) translateX(-6px) translateY(-6px);
+      }
+    }
+  }
+}

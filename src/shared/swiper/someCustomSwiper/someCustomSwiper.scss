@@ -1,0 +1,126 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.some-custom-swiper.swiper {
+  height: 471px;
+
+  @include mediaTablet {
+    height: 622px;
+  }
+
+  @include mediaLaptop {
+    height: 360px;
+  }
+}
+
+.some-custom-swiper .swiper-slide {
+  display: flex !important;
+  flex-direction: column;
+
+  @include mediaLaptop {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.some-custom-swiper .swiper-button-next {
+  width: fit-content !important;
+  height: fit-content !important;
+  top: auto !important;
+  right: 28px !important;
+  bottom: 50px !important;
+
+  @include mediaTablet {
+    right: 36px !important;
+    bottom: 52px !important;
+  }
+
+  @include mediaLaptop {
+    right: 52px !important;
+    bottom: 68px !important;
+  }
+}
+
+.some-custom-swiper .swiper-button-prev {
+  width: fit-content !important;
+  height: fit-content !important;
+  top: auto !important;
+  left: auto !important;
+  right: 84px !important;
+  bottom: 50px !important;
+
+  @include mediaTablet {
+    right: 92px !important;
+    bottom: 52px !important;
+  }
+
+  @include mediaLaptop {
+    right: 108px !important;
+    bottom: 68px !important;
+  }
+}
+
+.some-custom-swiper .swiper-button-next::after {
+  content: '' !important;
+  background: url('/svg/swiper-arrow-right.svg') no-repeat center !important;
+  width: 16px;
+  height: 16px;
+}
+
+.some-custom-swiper .swiper-button-prev::after {
+  content: '' !important;
+  background: url('/svg/swiper-arrow-left.svg') no-repeat center !important;
+  width: 16px;
+  height: 16px;
+}
+
+.some-custom-swiper {
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    @include mediaTablet {
+      height: 360px;
+    }
+
+    @include mediaLaptop {
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+
+    @include mediaLaptop {
+      width: calc(50% - 80px);
+      padding: 0 40px;
+    }
+  }
+
+  &__title {
+    color: $main_purple;
+    font-size: 24px;
+    font-weight: 600;
+
+    @include mediaTablet {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    margin-top: 16px;
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__link {
+    color: $main_purple;
+  }
+}

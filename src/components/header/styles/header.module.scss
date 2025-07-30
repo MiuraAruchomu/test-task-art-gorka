@@ -1,0 +1,20 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 16px;
+
+  @include mediaTablet {
+    padding: 24px;
+  }
+
+  @include mediaDesktop {
+    justify-content: space-between;
+    padding: 24px 40px;
+  }
+}

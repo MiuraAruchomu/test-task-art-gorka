@@ -1,0 +1,71 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.modal-leave-request {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 48px);
+    padding: 48px 16px 0 16px;
+    background-color: $white;
+    z-index: 999;
+
+    @include mediaTablet {
+      width: 720px;
+      height: calc(807px - 64px);
+      padding: 64px 24px 0 24px;
+    }
+  }
+
+  &__title {
+    color: $main_purple;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 16px;
+
+    @include mediaTablet {
+      font-size: 54px;
+    }
+  }
+
+  &__subtitle {
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      font-size: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 16px;
+  }
+
+  &__textarea {
+    height: calc(160px - 38px);
+  }
+
+  &__privacy-notice {
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__link {
+    color: $main_purple;
+    text-decoration: underline;
+  }
+}

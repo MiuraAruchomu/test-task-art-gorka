@@ -1,0 +1,19 @@
+@use "@/assets/styles/variables.scss" as *;
+
+@mixin mediaTablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mediaLaptop {
+    @media screen and (min-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin mediaDesktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}

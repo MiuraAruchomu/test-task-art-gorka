@@ -1,0 +1,65 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.header-dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  height: calc(100% - 81px - 40px - 16px);
+  padding-top: 40px;
+  padding-bottom: 16px;
+  background-color: $white;
+  border-top: 1px solid $main_purple;
+  z-index: 997;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  @include mediaTablet {
+    height: calc(100% - 97px - 40px - 16px);
+  }
+
+  @include mediaDesktop {
+    display: none;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 208px;
+
+    @include mediaTablet {
+      height: 252px;
+    }
+  }
+
+  &__item {
+    font-size: 32px;
+    font-weight: 600;
+    color: $main_purple;
+    transition: color 0.3s ease;
+
+    &:hover {
+      @include mediaLaptop {
+        color: $main_purple_light;
+      }
+    }
+
+    @include mediaTablet {
+      font-size: 40px;
+    }
+  }
+}
