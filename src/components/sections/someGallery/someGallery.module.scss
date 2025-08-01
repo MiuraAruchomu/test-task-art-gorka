@@ -1,0 +1,21 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.some-gallery {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &__title {
+    color: $main_purple;
+    font-size: 36px;
+    font-weight: 600;
+
+    @include mediaTablet {
+      font-size: 54px;
+    }
+  }
+}

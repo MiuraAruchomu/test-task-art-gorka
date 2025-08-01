@@ -1,0 +1,19 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.some-gallery-mobile {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 96px;
+  gap: 8px;
+
+  @include mediaTablet {
+    display: none;
+  }
+
+  &__img {
+    height: 196px;
+    object-fit: cover;
+  }
+}

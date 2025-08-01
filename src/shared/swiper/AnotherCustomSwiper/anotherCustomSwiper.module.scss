@@ -12,20 +12,4 @@
     margin-top: 64px;
     cursor: grab;
   }
-
-  &__mobile {
-    display: flex;
-
-    @include mediaLaptop {
-      display: none;
-    }
-  }
-
-  &__desktop {
-    display: none;
-
-    @include mediaLaptop {
-      display: flex;
-    }
-  }
 }

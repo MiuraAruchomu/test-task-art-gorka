@@ -1,6 +1,6 @@
-import { IProduct } from './products.interface';
+import { TProductsConfig } from './products.type';
 
-export const PRODUCTS: IProduct[] = [
+export const PRODUCTS: TProductsConfig = [
   {
     imgPath: '/img/landings.jpg',
     title: 'Лендинги',

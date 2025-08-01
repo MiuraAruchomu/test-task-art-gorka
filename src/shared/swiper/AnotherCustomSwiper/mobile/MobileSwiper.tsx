@@ -1,6 +1,6 @@
 import './mobileSwiper.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { IAnotherCustomSwiperProps } from '../anotherCustomSwiper.interface';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function AnotherSwiperMobile({
   config,

@@ -2,10 +2,15 @@
 @use '@/assets/styles/mixins.scss' as *;
 
 .another-swiper-mobile.swiper {
+  display: flex;
   height: 175px;
 
   @include mediaTablet {
     height: 360px;
+  }
+
+  @include mediaLaptop {
+    display: none;
   }
 }
 

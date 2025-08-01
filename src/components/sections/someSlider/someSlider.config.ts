@@ -1,4 +1,6 @@
-export const SOME_SLIDER = [
+import { TSomeCustomSwiperConfig } from '@/shared/swiper/someCustomSwiper/someCustomSwiper.type';
+
+export const SOME_SLIDER: TSomeCustomSwiperConfig = [
   {
     imgPath: '/img/slide-image.png',
     title: 'Какой-то слайдер',

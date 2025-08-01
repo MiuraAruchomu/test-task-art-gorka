@@ -16,3 +16,8 @@ export const LazyAboutStudio = dynamic(
   () => import('@/components/sections/aboutStudio/AboutStudio'),
   { ssr: false },
 );
+
+export const LazySomeGallery = dynamic(
+  () => import('@/components/sections/someGallery/SomeGallery'),
+  { ssr: false },
+);

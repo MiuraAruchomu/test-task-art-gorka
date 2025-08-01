@@ -2,7 +2,12 @@
 @use '@/assets/styles/mixins.scss' as *;
 
 .another-swiper-desktop.swiper {
-  height: 264px;
+  display: none;
+
+  @include mediaLaptop {
+    display: flex;
+    height: 264px;
+  }
 
   @include mediaDesktop {
     height: 360px;
