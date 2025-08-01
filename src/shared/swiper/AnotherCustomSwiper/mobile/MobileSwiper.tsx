@@ -1,10 +1,12 @@
 import './mobileSwiper.scss';
+import { TAboutStudioSliderConfig } from '@/components/sections/aboutStudio/aboutStudio.type';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { IAnotherCustomSwiperProps } from '../anotherCustomSwiper.interface';
 
 export default function AnotherSwiperMobile({
   config,
-}: IAnotherCustomSwiperProps) {
+}: {
+  config: TAboutStudioSliderConfig;
+}) {
   return (
     <Swiper
       spaceBetween={5}

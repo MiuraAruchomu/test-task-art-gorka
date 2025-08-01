@@ -1,3 +1,5 @@
+import { TSomeCustomSwiperConfig } from './someCustomSwiper.type';
+
 export interface ISomeCustomSwiperSlide {
   imgPath: string;
   title: string;
@@ -7,5 +9,5 @@ export interface ISomeCustomSwiperSlide {
 }
 
 export interface ISomeCustomSwiperProps {
-  config: ISomeCustomSwiperSlide[];
+  config: TSomeCustomSwiperConfig;
 }

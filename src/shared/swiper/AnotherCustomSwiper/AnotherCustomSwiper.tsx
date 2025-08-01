@@ -8,12 +8,8 @@ export default function AnotherCustomSwiper({
 }: IAnotherCustomSwiperProps) {
   return (
     <div className={styles['another-custom-swiper']}>
-      <div className={styles['another-custom-swiper__mobile']}>
-        <AnotherSwiperMobile config={config} />
-      </div>
-      <div className={styles['another-custom-swiper__desktop']}>
-        <AnotherSwiperDesktop config={config} />
-      </div>
+      <AnotherSwiperMobile config={config} />
+      <AnotherSwiperDesktop config={config} />
     </div>
   );
 }
