@@ -1,0 +1,71 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+
+  @include mediaLaptop {
+    width: calc(50% - 4px);
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 20px;
+    color: $main_purple;
+    font-size: 20px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      margin-top: 24px;
+      font-size: 32px;
+    }
+
+    @include mediaLaptop {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    @include mediaDesktop {
+      margin-top: 24px;
+      font-size: 32px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0px;
+    gap: 8px;
+  }
+
+  &__filter {
+    padding: 8px 16px;
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid rgb(66, 76, 92, 0.12);
+  }
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 8px;
+  }
+
+  &__link-img {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__link {
+    color: $main_purple;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}

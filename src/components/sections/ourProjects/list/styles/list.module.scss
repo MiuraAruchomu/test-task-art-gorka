@@ -1,0 +1,19 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.our-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @include mediaTablet {
+    gap: 67px;
+  }
+
+  @include mediaLaptop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 64px;
+  }
+}

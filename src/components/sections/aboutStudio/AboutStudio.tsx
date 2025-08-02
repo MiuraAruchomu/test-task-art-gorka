@@ -17,6 +17,7 @@ export default function AboutStudio() {
       setIsVisible(true);
     }
   }, [inView]);
+
   return (
     <section
       ref={ref}
