@@ -1,0 +1,18 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.our-projects-buttons {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-top: 32px;
+  padding-bottom: 40px;
+
+  @include mediaTablet {
+    padding-bottom: 64px;
+  }
+}
+
+.our-projects-buttons::-webkit-scrollbar {
+  display: none;
+}
