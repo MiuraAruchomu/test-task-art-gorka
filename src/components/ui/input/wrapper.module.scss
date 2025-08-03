@@ -30,7 +30,7 @@
   }
 
   &.focused {
-    box-shadow: inset 0 0 0 2px $main_purple;
+    box-shadow: inset 0 0 0 1px $main_purple;
     background-color: $main_grey_light;
 
     .ui-input-wrapper-dark__placeholder {
@@ -40,7 +40,7 @@
   }
 
   &.errored {
-    box-shadow: inset 0 0 0 2px $main_error;
+    box-shadow: inset 0 0 0 1px $main_error;
     background-color: rgba(255, 85, 85, 0.2);
   }
 }
@@ -51,7 +51,7 @@
   padding: 19px 24px;
   color: $white;
   cursor: text;
-  box-shadow: inset 0 0 0 1px rgb(66, 76, 92, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 
   &__required {
     position: absolute;
@@ -66,7 +66,7 @@
 
   &__placeholder {
     position: absolute;
-    color: rgba(66, 76, 92, 0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
 
   &__error {
@@ -76,7 +76,7 @@
   }
 
   &.focused {
-    box-shadow: inset 0 0 0 2px $white;
+    box-shadow: inset 0 0 0 1px $white;
     background-color: $main_purple_dark;
 
     .ui-input-wrapper-light__placeholder {
@@ -86,7 +86,7 @@
   }
 
   &.errored {
-    box-shadow: inset 0 0 0 2px $main_error;
+    box-shadow: inset 0 0 0 1px $main_error;
     background-color: rgba(255, 85, 85, 0.2);
   }
 }
