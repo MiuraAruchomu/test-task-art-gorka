@@ -1,5 +1,5 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .ui-button-wrapper {
   display: flex;
@@ -15,9 +15,7 @@
 
     &:hover {
       @include mediaLaptop {
-        color: $white;
-        background-color: $main_purple;
-        border: 1px solid $main_purple;
+        border: 1px solid $main_purple_dark;
       }
     }
   }
@@ -31,8 +29,7 @@
 
     &:hover {
       @include mediaLaptop {
-        color: $white;
-        background-color: $main_purple;
+        color: $main_purple;
         border: 1px solid $main_purple;
       }
     }
@@ -43,9 +40,28 @@
     font-weight: 600;
     transition: color 0.3s ease;
 
+    > button {
+      position: relative;
+    }
+
+    > button::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $main_purple;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s ease-in-out;
+    }
+
     &:hover {
       @include mediaLaptop {
-        color: $main_purple_light;
+        > button::after {
+          transform: scaleX(1);
+        }
       }
     }
   }
@@ -57,7 +73,7 @@
 
     &:hover {
       @include mediaLaptop {
-        background-color: $main_purple_light;
+        background-color: $main_purple_dark;
       }
     }
   }
