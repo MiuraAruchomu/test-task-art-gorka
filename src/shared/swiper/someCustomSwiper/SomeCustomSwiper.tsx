@@ -43,7 +43,7 @@ export default function SomeCustomSwiper({ config }: ISomeCustomSwiperProps) {
                 {slide.linkPath && slide.linkName && (
                   <Link
                     href={slide.linkPath}
-                    className={'some-custom-swiper__link'}
+                    className={'some-custom-swiper__link under-line-link'}
                   >
                     {slide.linkName}
                   </Link>

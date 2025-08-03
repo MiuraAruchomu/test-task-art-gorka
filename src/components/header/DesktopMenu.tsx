@@ -10,7 +10,7 @@ export default function HeaderDesktopMenu() {
           <li key={link.linkName}>
             <Link
               href={link.linkPath}
-              className={`${styles['header-desktop-menu__item']}`}
+              className={`${styles['header-desktop-menu__item']} under-line-link`}
             >
               {link.linkName}
             </Link>
