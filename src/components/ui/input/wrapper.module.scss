@@ -1,39 +1,92 @@
-@use '@/assets/styles/variables.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
 
-.ui-input-wrapper {
+.ui-input-wrapper-dark {
   position: relative;
   display: flex;
   padding: 19px 24px;
-  box-shadow: inset 0 0 0 1px rgb(66, 76, 92, 0.12);
   cursor: text;
+  box-shadow: inset 0 0 0 1px rgb(66, 76, 92, 0.12);
 
   &__required {
     position: absolute;
     top: 6px;
     left: 6px;
     color: $main_purple;
+
+    &.errored {
+      color: $main_error;
+    }
   }
 
   &__placeholder {
     position: absolute;
-    color: $text_primary;
+    color: rgba(66, 76, 92, 0.5);
   }
 
   &__error {
-    position: absolute;
-    color: $main_purple;
+    color: $text_primary;
+    margin-top: -10px;
+    margin-left: 20px;
   }
 
   &.focused {
     box-shadow: inset 0 0 0 2px $main_purple;
+    background-color: $main_grey_light;
 
-    .ui-input-wrapper__placeholder {
+    .ui-input-wrapper-dark__placeholder {
       opacity: 0;
       visibility: hidden;
     }
   }
 
   &.errored {
-    box-shadow: inset 0 0 0 2px $main_purple;
+    box-shadow: inset 0 0 0 2px $main_error;
+    background-color: rgba(255, 85, 85, 0.2);
+  }
+}
+
+.ui-input-wrapper-light {
+  position: relative;
+  display: flex;
+  padding: 19px 24px;
+  color: $white;
+  cursor: text;
+  box-shadow: inset 0 0 0 1px rgb(66, 76, 92, 0.12);
+
+  &__required {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: $white;
+
+    &.errored {
+      color: $main_error;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    color: rgba(66, 76, 92, 0.5);
+  }
+
+  &__error {
+    color: $white;
+    margin-top: -10px;
+    margin-left: 20px;
+  }
+
+  &.focused {
+    box-shadow: inset 0 0 0 2px $white;
+    background-color: $main_purple_dark;
+
+    .ui-input-wrapper-light__placeholder {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &.errored {
+    box-shadow: inset 0 0 0 2px $main_error;
+    background-color: rgba(255, 85, 85, 0.2);
   }
 }

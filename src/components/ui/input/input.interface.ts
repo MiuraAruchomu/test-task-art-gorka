@@ -1,4 +1,5 @@
 export interface IinputWrapperProps {
+  type: string;
   field: string;
   placeholder: string;
   required: boolean;
