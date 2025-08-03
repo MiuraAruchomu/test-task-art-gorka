@@ -1,5 +1,5 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .modal-thank-for-request {
   position: fixed;
@@ -14,14 +14,15 @@
   &__inner {
     position: relative;
     width: 100%;
-    height: calc(100% - 48px);
+    height: calc(100dvh - 128px);
     padding: 64px 24px;
     background-color: $white;
     z-index: 999;
 
     @include mediaTablet {
       width: 720px;
-      height: calc(331px - 128px);
+      height: fit-content;
+      max-height: 100dvh;
       padding: 64px 16px;
     }
   }
