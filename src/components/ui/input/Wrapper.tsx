@@ -3,6 +3,7 @@ import { IinputWrapperProps } from './input.interface';
 import { useState } from 'react';
 
 export default function UiInputWrapper({
+  type,
   field,
   placeholder,
   required,
@@ -26,8 +27,8 @@ export default function UiInputWrapper({
 
   const onBlur = () => {
     if (required && !value) {
-      setError('Это обязательное поле!');
-      updateError('Обязательное поле не заполнено');
+      setError('Поле заполнено некорректно');
+      updateError('Поле заполнено некорректно');
     } else if (required && value) {
       setError(null);
       updateError(null);
@@ -37,22 +38,28 @@ export default function UiInputWrapper({
   };
 
   return (
-    <label
-      className={`${styles['ui-input-wrapper']} ${focused || value ? styles.focused : ''} ${error ? styles.errored : ''}`}
-      onChange={onChange}
-      onFocus={onFocus}
-      onBlur={onBlur}
-    >
-      {required && (
-        <span className={styles['ui-input-wrapper__required']}>*</span>
-      )}
-      {placeholder && !error && (
-        <span className={styles['ui-input-wrapper__placeholder']}>
-          {placeholder}
-        </span>
-      )}
-      {children}
-      <span className={styles['ui-input-wrapper__error']}>{error}</span>
-    </label>
+    <>
+      <label
+        className={`${styles[`ui-input-wrapper-${type}`]} ${focused ? styles.focused : ''} ${error ? styles.errored : ''}`}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+      >
+        {required && (
+          <span
+            className={`${styles[`ui-input-wrapper-${type}__required`]} ${error ? styles.errored : ''}`}
+          >
+            *
+          </span>
+        )}
+        {placeholder && !value && !error && (
+          <span className={styles[`ui-input-wrapper-${type}__placeholder`]}>
+            {placeholder}
+          </span>
+        )}
+        {children}
+      </label>
+      <span className={styles[`ui-input-wrapper-${type}__error`]}>{error}</span>
+    </>
   );
 }

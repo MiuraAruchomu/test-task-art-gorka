@@ -1,5 +1,5 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .modal-leave-request {
   position: fixed;
@@ -14,15 +14,13 @@
   &__inner {
     position: relative;
     width: 100%;
-    height: calc(100% - 48px);
-    padding: 48px 16px 0 16px;
+    padding: 48px 16px 48px 16px;
     background-color: $white;
     z-index: 999;
 
     @include mediaTablet {
       width: 720px;
-      height: calc(807px - 64px);
-      padding: 64px 24px 0 24px;
+      padding: 64px 24px 64px 24px;
     }
   }
 

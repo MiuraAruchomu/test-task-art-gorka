@@ -18,7 +18,7 @@ export default function LeaveRequest({
 
   const [config, setConfig] = useState({});
   const [error, setError] = useState<string | null>(
-    'Обязательное поле не заполнено',
+    'Поле заполнено некорректно',
   );
 
   const updateConfig = ({ field, value }: { field: string; value: string }) => {
@@ -65,6 +65,7 @@ export default function LeaveRequest({
           onSubmit={onSubmit}
         >
           <UiInputWrapper
+            type={'dark'}
             field={'name'}
             placeholder={'Имя'}
             required={false}
@@ -73,6 +74,7 @@ export default function LeaveRequest({
             children={<input />}
           />
           <UiInputWrapper
+            type={'dark'}
             field={'phone'}
             placeholder={'Телефон'}
             required={true}
@@ -81,6 +83,7 @@ export default function LeaveRequest({
             children={<input />}
           />
           <UiInputWrapper
+            type={'dark'}
             field={'email'}
             placeholder={'Email'}
             required={false}
@@ -89,6 +92,7 @@ export default function LeaveRequest({
             children={<input />}
           />
           <UiInputWrapper
+            type={'dark'}
             field={'message'}
             placeholder={'Опишите ваш запрос'}
             required={false}
