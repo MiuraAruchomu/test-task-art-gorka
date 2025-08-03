@@ -22,6 +22,7 @@
         transition:
             opacity 0.3s ease,
             transform 0.6s ease-in-out 0.6s;
+        will-change: transform;
 
         @include mediaTablet {
             font-size: 54px;
@@ -40,6 +41,7 @@
         gap: 10px;
         opacity: 0;
         transition: opacity 0.6s ease 1.5s;
+        will-change: opacity;
 
         @include mediaTablet {
             flex-direction: row;
@@ -60,6 +62,7 @@
         transform: translateX(-50%) translateY(-50%);
         opacity: 0;
         transition: opacity 0.9s ease 2s;
+        will-change: opacity;
 
         @include mediaTablet {
             display: flex;
