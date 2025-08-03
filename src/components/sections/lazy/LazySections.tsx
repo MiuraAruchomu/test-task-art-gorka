@@ -36,3 +36,8 @@ export const LazyWhatWeDo = dynamic(
   () => import('@/components/sections/whatWeDo/WhatWeDo'),
   { ssr: false },
 );
+
+export const LazyAboutUs = dynamic(
+  () => import('@/components/sections/aboutUs/AboutUs'),
+  { ssr: false },
+);
