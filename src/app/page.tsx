@@ -5,6 +5,7 @@ import {
   LazySomeGallery,
   LazyOurProjects,
   LazySomeTable,
+  LazyWhatWeDo,
 } from '@/components/sections/lazy/LazySections';
 import TestTask from '@/components/sections/testTask/TestTask';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <LazySomeGallery />
       <LazyOurProjects />
       <LazySomeTable />
+      <LazyWhatWeDo />
     </>
   );
 }

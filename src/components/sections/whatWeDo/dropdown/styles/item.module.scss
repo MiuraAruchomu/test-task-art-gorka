@@ -1,0 +1,93 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid rgb(66, 76, 92, 0.12);
+  transition: border-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &.visible {
+    border-bottom-color: transparent;
+  }
+
+  &__name {
+    color: $text_primary;
+    font-size: 20px;
+    font-weight: 400;
+
+    @include mediaTablet {
+      font-size: 24px;
+    }
+
+    &.visible {
+      color: $main_purple;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background-color: $main_purple;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 1px;
+      background-color: $main_purple;
+      transform: rotate(90deg);
+    }
+
+    &.visible {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__content {
+    &.visible {
+      border-bottom: 1px solid $main_purple;
+      padding-bottom: 24px;
+
+      @include mediaTablet {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    padding-left: 24px;
+    text-indent: -22px;
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+    list-style-type: disc;
+    list-style-position: inside;
+    gap: 8px;
+
+    > .dropdown-item__list {
+      > .dropdown-item__item:first-child {
+        margin-top: 8px;
+      }
+    }
+  }
+}

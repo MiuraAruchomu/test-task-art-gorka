@@ -31,3 +31,8 @@ export const LazySomeTable = dynamic(
   () => import('@/components/sections/someTable/SomeTable'),
   { ssr: false },
 );
+
+export const LazyWhatWeDo = dynamic(
+  () => import('@/components/sections/whatWeDo/WhatWeDo'),
+  { ssr: false },
+);

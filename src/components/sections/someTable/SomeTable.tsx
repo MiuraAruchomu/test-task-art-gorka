@@ -17,7 +17,7 @@ export default function SomeTable() {
   }, [inView]);
 
   return (
-    <div
+    <section
       ref={ref}
       className={`${styles['some-table']} ${isVisible ? styles.visible : ''} container`}
     >
@@ -33,6 +33,6 @@ export default function SomeTable() {
             </div>
           ))}
       </div>
-    </div>
+    </section>
   );
 }
