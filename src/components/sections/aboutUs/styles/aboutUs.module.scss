@@ -1,0 +1,72 @@
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 116px;
+
+    @include mediaTablet {
+        gap: 64px;
+        padding-bottom: 144px;
+    }
+
+    &__title {
+        color: $main_purple;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(205px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.6s ease-in-out 0.6s;
+
+        @include mediaTablet {
+            font-size: 54px;
+        }
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__blocks-list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.6s ease 1.5s;
+
+        @include mediaTablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        display: none;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.9s ease 2s;
+
+        @include mediaTablet {
+            display: flex;
+        }
+
+        &.visible {
+            opacity: 1;
+        }
+    }
+}

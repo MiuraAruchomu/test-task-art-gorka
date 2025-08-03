@@ -1,0 +1,43 @@
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
+
+.about-us-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    color: $white;
+    background-color: $main_purple;
+    border-radius: 160px;
+
+    @include mediaTablet {
+        width: calc(50% - 4px);
+
+        &:nth-child(1),
+        &:nth-child(4) {
+            border-radius: 160px 0 160px 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            border-radius: 0 160px 0 160px;
+        }
+    }
+
+    &__inner {
+        width: 220px;
+        text-align: center;
+
+        @include mediaTablet {
+            width: 204px;
+        }
+
+        @include mediaLaptop {
+            width: 320px;
+        }
+
+        @include mediaDesktop {
+            width: 484px;
+        }
+    }
+}
