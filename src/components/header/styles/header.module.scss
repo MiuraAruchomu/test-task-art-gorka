@@ -1,13 +1,25 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 48px;
   padding: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  transition:
+    border-color 0.3s ease-in-out,
+    background-color 0.3s ease;
+  z-index: 997;
 
   @include mediaTablet {
     padding: 24px;
@@ -16,5 +28,13 @@
   @include mediaDesktop {
     justify-content: space-between;
     padding: 24px 40px;
+  }
+
+  &.scrolled {
+    border-bottom-color: $main_purple;
+  }
+
+  &.menu-is-open {
+    background-color: $white;
   }
 }

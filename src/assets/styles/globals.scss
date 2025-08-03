@@ -10,6 +10,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+html {
+  padding-top: 80px;
+
+  @include mediaTablet {
+    padding-top: 96px;
+  }
+}
+
 input {
   -webkit-tap-highlight-color: transparent;
 }

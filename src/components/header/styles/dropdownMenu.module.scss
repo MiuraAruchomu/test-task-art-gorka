@@ -1,8 +1,8 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .header-dropdown-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,6 +11,7 @@
   visibility: hidden;
   left: 0;
   right: 0;
+  bottom: 0;
   height: calc(100% - 81px - 40px - 16px);
   padding-top: 40px;
   padding-bottom: 16px;

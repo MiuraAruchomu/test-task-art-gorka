@@ -1,5 +1,5 @@
-@use '@/assets/styles/variables.scss' as *;
-@use '@/assets/styles/mixins.scss' as *;
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 .dropdown-item {
   display: flex;
@@ -37,14 +37,14 @@
     transition: transform 0.3s ease;
 
     &::before {
-      content: '';
+      content: "";
       width: 24px;
       height: 1px;
       background-color: $main_purple;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 24px;
       height: 1px;
