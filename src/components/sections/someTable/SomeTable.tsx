@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function SomeTable() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',

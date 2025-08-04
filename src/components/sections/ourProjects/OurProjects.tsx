@@ -7,7 +7,7 @@ import OurProjectsButtons from './buttons/Buttons';
 import OurProjectsList from './list/List';
 
 export default function OurProjects() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',

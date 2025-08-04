@@ -6,7 +6,7 @@ import AboutStudioSlider from './Slider';
 import AboutStudioInfo from './info/Info';
 
 export default function AboutStudio() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',

@@ -1,0 +1,21 @@
+@use "@/assets/styles/variables.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
+
+.stages-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+
+    @include mediaLaptop {
+        width: 620px;
+    }
+
+    @include mediaDesktop {
+        width: 820px;
+    }
+
+    &__link {
+        color: $main_purple;
+    }
+}

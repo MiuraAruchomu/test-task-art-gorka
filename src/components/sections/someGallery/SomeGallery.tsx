@@ -5,7 +5,7 @@ import SomeGalleryMobile from './mobile/Mobile';
 import SomeGalleryDesktop from './desktop/Desktop';
 
 export default function SomeGallery() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',

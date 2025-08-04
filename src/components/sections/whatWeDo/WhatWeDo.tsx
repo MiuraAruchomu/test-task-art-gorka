@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import WhatWeDoDropdownList from './dropdown/List';
 
 export default function WhatWeDo() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',
