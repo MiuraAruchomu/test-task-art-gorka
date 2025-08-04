@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import SomeCustomSwiper from '@/shared/swiper/someCustomSwiper/SomeCustomSwiper';
 
 export default function SomeSlider() {
-  const [isVisible, setIsVisible] = useState<boolean | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '0px 0px -40% 0px',
