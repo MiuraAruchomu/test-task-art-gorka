@@ -12,7 +12,7 @@ export default function CloseButton({
   const dispatch = useAppDispatch();
 
   const handleClose = () => {
-    if (modalClose === 'leave-request') {
+    if (modalClose === 'leave-request' || modalClose === 'thanks-for-request') {
       dispatch(closeDropdownMenu());
     }
 

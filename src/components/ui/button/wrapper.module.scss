@@ -78,6 +78,18 @@
     }
   }
 
+  &_fill-reverse {
+    color: $main_purple;
+    background-color: $white;
+    transition: color 0.3s ease;
+
+    &:hover {
+      @include mediaLaptop {
+        color: $main_purple_dark;
+      }
+    }
+  }
+
   &_fill-rounded {
     color: $white;
     border: 1px solid $main_purple;

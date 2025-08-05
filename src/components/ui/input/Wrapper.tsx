@@ -58,8 +58,12 @@ export default function UiInputWrapper({
           </span>
         )}
         {children}
+        {error && (
+          <span className={styles[`ui-input-wrapper-${type}__error`]}>
+            {error}
+          </span>
+        )}
       </label>
-      <span className={styles[`ui-input-wrapper-${type}__error`]}>{error}</span>
     </>
   );
 }
