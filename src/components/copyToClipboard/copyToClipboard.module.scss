@@ -1,0 +1,24 @@
+@use '@/assets/styles/variables.scss' as *;
+
+.copy-to-clipboard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__text {
+    width: 0;
+    color: $text_primary;
+    font-size: 13px;
+    font-weight: 400;
+    overflow: hidden;
+    transition: width 0.6s ease;
+
+    &.copied {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    cursor: pointer;
+  }
+}

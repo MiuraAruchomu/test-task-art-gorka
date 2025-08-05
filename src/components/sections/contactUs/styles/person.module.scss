@@ -1,0 +1,25 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.contact-person {
+  display: flex;
+  gap: 16px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 171px;
+  }
+
+  &__phone {
+    color: $main_purple;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__name {
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
