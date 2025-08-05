@@ -44,10 +44,9 @@
 
   &__filter {
     padding: 8px 16px;
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
     border: 1px solid rgb(66, 76, 92, 0.12);
+
+    @include font_16_400;
   }
 
   &__link-wrapper {

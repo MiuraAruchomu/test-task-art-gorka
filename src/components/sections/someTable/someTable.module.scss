@@ -25,12 +25,8 @@
 
   &__title {
     color: $main_purple;
-    font-size: 36px;
-    font-weight: 600;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
   }
 
   &__list {
@@ -53,15 +49,11 @@
     }
 
     &_title {
-      color: $text_primary;
-      font-size: 16px;
-      font-weight: 600;
+      @include font_16_400;
     }
 
     &_text {
-      color: $text_primary;
-      font-size: 16px;
-      font-weight: 400;
+      @include font_16_400;
 
       @include mediaTablet {
         width: 424px;

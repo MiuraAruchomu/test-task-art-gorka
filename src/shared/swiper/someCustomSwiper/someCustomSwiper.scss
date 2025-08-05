@@ -115,9 +115,8 @@
 
   &__description {
     margin-top: 16px;
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
+
+    @include font_16_400;
   }
 
   &__link {

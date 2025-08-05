@@ -61,12 +61,6 @@
   }
 
   &__subtitle {
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
-
-    @include mediaTablet {
-      font-size: 20px;
-    }
+    @include font_20_400;
   }
 }

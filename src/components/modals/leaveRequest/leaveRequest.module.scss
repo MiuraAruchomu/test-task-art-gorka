@@ -1,5 +1,5 @@
-@use "@/assets/styles/variables.scss" as *;
-@use "@/assets/styles/mixins.scss" as *;
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
 
 .modal-leave-request {
   position: fixed;
@@ -32,23 +32,13 @@
 
   &__title {
     color: $main_purple;
-    font-size: 36px;
-    font-weight: 600;
     margin-bottom: 16px;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
   }
 
   &__subtitle {
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
-
-    @include mediaTablet {
-      font-size: 20px;
-    }
+    @include font_20_400;
   }
 
   &__form {
@@ -63,9 +53,7 @@
   }
 
   &__privacy-notice {
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
+    @include font_16_400;
   }
 
   &__link {
