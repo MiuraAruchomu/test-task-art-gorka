@@ -46,3 +46,8 @@ export const LazyStages = dynamic(
   () => import('@/components/sections/stages/Stages'),
   { ssr: false },
 );
+
+export const LazyFeedbackForm = dynamic(
+  () => import('@/components/sections/feedbackForm/FeedbackForm'),
+  { ssr: false },
+);

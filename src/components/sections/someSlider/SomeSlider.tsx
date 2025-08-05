@@ -20,7 +20,7 @@ export default function SomeSlider() {
   return (
     <section
       ref={ref}
-      className={`${styles['some-slider-bg']} ${isVisible ? styles.visible : ''}`}
+      className={`${styles['some-slider']} ${isVisible ? styles.visible : ''}`}
     >
       <div className='container'>
         <SomeCustomSwiper config={SOME_SLIDER} />

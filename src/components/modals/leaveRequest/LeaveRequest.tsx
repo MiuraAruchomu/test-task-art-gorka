@@ -71,7 +71,7 @@ export default function LeaveRequest({
             required={false}
             updateConfig={updateConfig}
             updateError={updateError}
-            children={<input />}
+            children={<input name='name' />}
           />
           <UiInputWrapper
             type={'dark'}
@@ -80,7 +80,7 @@ export default function LeaveRequest({
             required={true}
             updateConfig={updateConfig}
             updateError={updateError}
-            children={<input />}
+            children={<input name='phone' />}
           />
           <UiInputWrapper
             type={'dark'}
@@ -89,7 +89,7 @@ export default function LeaveRequest({
             required={false}
             updateConfig={updateConfig}
             updateError={updateError}
-            children={<input />}
+            children={<input name='email' />}
           />
           <UiInputWrapper
             type={'dark'}
@@ -108,7 +108,7 @@ export default function LeaveRequest({
             children={<button>Отправить</button>}
           />
           <span className={styles['modal-leave-request__privacy-notice']}>
-            Нажимая кнопку «Отправить» вы соглашаетесь на{' '}
+            Нажимая кнопку «Отправить» вы соглашаетесь на
             <Link href={'#'} className={styles['modal-leave-request__link']}>
               обработку персональных данных
             </Link>
