@@ -9,6 +9,7 @@ import {
   LazyAboutUs,
   LazyStages,
   LazyFeedbackForm,
+  LazyContactUs,
 } from '@/components/sections/lazy/LazySections';
 import TestTask from '@/components/sections/testTask/TestTask';
 
@@ -26,6 +27,7 @@ export default function Home() {
       <LazyAboutUs />
       <LazyStages />
       <LazyFeedbackForm />
+      <LazyContactUs />
     </>
   );
 }

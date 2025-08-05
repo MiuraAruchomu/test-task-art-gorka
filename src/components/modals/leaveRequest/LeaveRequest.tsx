@@ -108,7 +108,7 @@ export default function LeaveRequest({
             children={<button>Отправить</button>}
           />
           <span className={styles['modal-leave-request__privacy-notice']}>
-            Нажимая кнопку «Отправить» вы соглашаетесь на
+            Нажимая кнопку «Отправить» вы соглашаетесь на 
             <Link href={'#'} className={styles['modal-leave-request__link']}>
               обработку персональных данных
             </Link>

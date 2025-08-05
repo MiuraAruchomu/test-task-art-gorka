@@ -51,3 +51,8 @@ export const LazyFeedbackForm = dynamic(
   () => import('@/components/sections/feedbackForm/FeedbackForm'),
   { ssr: false },
 );
+
+export const LazyContactUs = dynamic(
+  () => import('@/components/sections/contactUs/ContactUs'),
+  { ssr: false },
+);

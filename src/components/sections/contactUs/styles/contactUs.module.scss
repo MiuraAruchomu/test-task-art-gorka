@@ -1,0 +1,142 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  padding-top: 96px;
+  padding-bottom: 64px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+
+  @include mediaTablet {
+    padding-top: 144px;
+  }
+
+  @include mediaLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 144px;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &__title {
+    @include font_title;
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+
+    @include font_text_primary;
+
+    @include mediaTablet {
+      margin-top: 16px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+
+    @include mediaTablet {
+      margin-top: 64px;
+    }
+
+    @include mediaDesktop {
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
+
+  &__persons {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include mediaTablet {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    @include mediaDesktop {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 40px;
+
+    @include mediaTablet {
+      margin-top: 48px;
+    }
+
+    @include mediaLaptop {
+      margin-top: 64px;
+    }
+
+    @include mediaDesktop {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &_with-copy {
+      flex-direction: row;
+    }
+  }
+
+  &__copy-text {
+    width: fit-content;
+    color: $main_purple;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__link {
+    width: fit-content;
+    color: $main_purple;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__text {
+    color: $text_primary;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__map {
+    width: 100%;
+    height: 240px;
+    margin-top: 48px;
+
+    @include mediaTablet {
+      width: 100%;
+      height: 428px;
+      margin-top: 64px;
+    }
+
+    @include mediaLaptop {
+      width: 480px;
+      height: 480px;
+      margin-top: 0;
+    }
+
+    @include mediaDesktop {
+      width: 539px;
+      height: 400px;
+    }
+  }
+}
