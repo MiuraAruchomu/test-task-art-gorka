@@ -56,7 +56,7 @@ export default function FeedbackForm() {
         </span>
         <form
           key={resetCounter}
-          className={`${styles['feedback-form__form']} ${error ? styles.errored : ''}`}
+          className={styles['feedback-form__form']}
           onSubmit={onSubmit}
         >
           <UiInputWrapper
