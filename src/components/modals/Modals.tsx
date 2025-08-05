@@ -15,6 +15,10 @@ const LazyThanksForRequest = dynamic(
   { ssr: false },
 );
 
+const LazyThanks = dynamic(() => import('@/components/modals/thanks/Thanks'), {
+  ssr: false,
+});
+
 export default function Modals() {
   const modals = useAppSelector(selectActiveModals);
 
@@ -34,6 +38,7 @@ export default function Modals() {
       {modals.includes('thanks-for-request') && (
         <LazyThanksForRequest modalClose={'thanks-for-request'} />
       )}
+      {modals.includes('thanks') && <LazyThanks modalClose={'thanks'} />}
     </>
   );
 }

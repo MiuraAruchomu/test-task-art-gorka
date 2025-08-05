@@ -1,7 +1,7 @@
 @use '@/assets/styles/variables.scss' as *;
 @use '@/assets/styles/mixins.scss' as *;
 
-.modal-thanks-for-request {
+.modal-thanks {
   position: fixed;
   inset: 0;
   display: flex;
@@ -14,8 +14,8 @@
   &__inner {
     position: relative;
     width: 100%;
-    height: calc(100dvh - 128px);
-    padding: 64px 24px;
+    height: calc(100dvh - 64px);
+    padding: 32px 24px;
     background-color: $white;
     z-index: 999;
 
@@ -23,20 +23,20 @@
       width: 720px;
       height: fit-content;
       max-height: 100dvh;
-      padding: 64px 16px;
+      padding: 32px 16px;
     }
   }
 
   &__title {
-    color: $main_purple;
-    margin-bottom: 16px;
-
-    @include font_title;
+    color: $text_primary;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   &__subtitle {
-    margin-bottom: 40px;
+    margin-top: 8px;
+    margin-bottom: 20px;
 
-    @include font_20_400;
+    @include font_16_400;
   }
 }

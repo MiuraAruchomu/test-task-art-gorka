@@ -22,16 +22,16 @@ export default function ThanksForRequest({
   };
 
   return (
-    <div className={styles['modal-thank-for-request']} onClick={handleClose}>
+    <div className={styles['modal-thanks-for-request']} onClick={handleClose}>
       <div
-        className={styles['modal-thank-for-request__inner']}
+        className={styles['modal-thanks-for-request__inner']}
         onClick={(e) => e.stopPropagation()}
       >
         <CloseButton modalClose={modalClose} />
-        <h1 className={styles['modal-thank-for-request__title']}>
+        <h1 className={styles['modal-thanks-for-request__title']}>
           Спасибо за обращение
         </h1>
-        <p className={styles['modal-thank-for-request__subtitle']}>
+        <p className={styles['modal-thanks-for-request__subtitle']}>
           Мы уже получили вашу заявку, свяжемся с вами в течение дня
         </p>
         <UiButtonWrapper

@@ -1,4 +1,4 @@
-export type TModals = 'leave-request' | 'thanks-for-request';
+export type TModals = 'leave-request' | 'thanks-for-request' | 'thanks';
 
 export type TModalClose = Partial<TModals>;
 
