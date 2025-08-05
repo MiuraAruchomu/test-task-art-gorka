@@ -14,25 +14,20 @@
 
   &__title {
     margin-bottom: 16px;
-    color: $white;
-    font-size: 36px;
-    font-weight: 600;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
+    color: $white;
   }
 
   &__subtitle {
     display: inline-block;
     margin-bottom: 40px;
+
+    @include font_20_400;
     color: rgba(255, 255, 255, 0.72);
-    font-size: 16px;
-    font-weight: 400;
 
     @include mediaTablet {
       margin-bottom: 48px;
-      font-size: 20px;
     }
   }
 
@@ -66,10 +61,10 @@
 
   &__privacy-notice {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 16px;
-    font-weight: 400;
     margin-top: 40px;
+
+    @include font_16_400;
+    color: rgba(255, 255, 255, 0.72);
 
     @include mediaTablet {
       margin-top: 48px;

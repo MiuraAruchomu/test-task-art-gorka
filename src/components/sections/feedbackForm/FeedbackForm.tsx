@@ -1,4 +1,6 @@
 import styles from './feedbackForm.module.scss';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
+import { openModal } from '@/features/modals/modalsSlice';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
@@ -6,6 +8,8 @@ import UiInputWrapper from '@/components/ui/input/Wrapper';
 import UiButtonWrapper from '@/components/ui/button/Wrapper';
 
 export default function FeedbackForm() {
+  const dispatch = useAppDispatch();
+
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -33,6 +37,7 @@ export default function FeedbackForm() {
   const onSubmit = (e: any) => {
     e.preventDefault();
     if (error) return;
+    dispatch(openModal('thanks'));
     setResetCounter((prev) => prev + 1);
   };
 

@@ -1,0 +1,28 @@
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
+
+.footer {
+  padding: 40px 0;
+  background-color: $main_grey_light;
+
+  &__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+
+    @include mediaLaptop {
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+
+  &__c {
+    @include font_20_400;
+  }
+
+  &__privacy-notice {
+    @include font_16_400;
+    color: $main_purple;
+  }
+}

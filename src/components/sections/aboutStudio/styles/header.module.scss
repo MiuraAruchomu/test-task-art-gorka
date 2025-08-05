@@ -18,23 +18,14 @@
 
   &__title {
     color: $main_purple;
-    font-size: 36px;
-    font-weight: 600;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
   }
 
   &__subtitle {
     max-width: 600px;
     margin-top: 16px;
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
 
-    @include mediaTablet {
-      font-size: 20px;
-    }
+    @include font_20_400;
   }
 }

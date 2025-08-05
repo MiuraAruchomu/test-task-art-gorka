@@ -1,7 +1,7 @@
-@use "@/assets/styles/variables.scss" as *;
-@use "@/assets/styles/mixins.scss" as *;
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
 
-.modal-thank-for-request {
+.modal-thanks-for-request {
   position: fixed;
   inset: 0;
   display: flex;
@@ -29,23 +29,14 @@
 
   &__title {
     color: $main_purple;
-    font-size: 36px;
-    font-weight: 600;
     margin-bottom: 16px;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
   }
 
   &__subtitle {
     margin-bottom: 40px;
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
 
-    @include mediaTablet {
-      font-size: 20px;
-    }
+    @include font_20_400;
   }
 }

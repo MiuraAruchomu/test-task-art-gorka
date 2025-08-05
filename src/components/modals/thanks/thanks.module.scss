@@ -1,7 +1,7 @@
 @use '@/assets/styles/variables.scss' as *;
 @use '@/assets/styles/mixins.scss' as *;
 
-.modal-leave-request {
+.modal-thanks {
   position: fixed;
   inset: 0;
   display: flex;
@@ -9,55 +9,34 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
-  overflow: auto;
   z-index: 998;
 
   &__inner {
     position: relative;
     width: 100%;
-    height: calc(100dvh - 96px);
-    padding: 48px 16px 48px 16px;
+    height: calc(100dvh - 64px);
+    padding: 32px 24px;
     background-color: $white;
-    overflow-y: scroll;
     z-index: 999;
 
     @include mediaTablet {
       width: 720px;
       height: fit-content;
       max-height: 100dvh;
-      overflow-y: hidden;
-      padding: 64px 24px 64px 24px;
+      padding: 32px 16px;
     }
   }
 
   &__title {
-    color: $main_purple;
-    margin-bottom: 16px;
-
-    @include font_title;
+    color: $text_primary;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   &__subtitle {
-    @include font_20_400;
-  }
+    margin-top: 8px;
+    margin-bottom: 20px;
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    gap: 16px;
-  }
-
-  &__textarea {
-    height: calc(160px - 38px);
-  }
-
-  &__privacy-notice {
     @include font_16_400;
-  }
-
-  &__link {
-    color: $main_purple;
-    text-decoration: underline;
   }
 }

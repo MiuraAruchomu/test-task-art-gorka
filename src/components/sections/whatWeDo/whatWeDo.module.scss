@@ -16,11 +16,7 @@
 
   &__title {
     color: $main_purple;
-    font-size: 36px;
-    font-weight: 600;
 
-    @include mediaTablet {
-      font-size: 54px;
-    }
+    @include font_title;
   }
 }

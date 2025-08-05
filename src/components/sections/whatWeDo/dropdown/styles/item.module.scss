@@ -1,5 +1,5 @@
-@use "@/assets/styles/variables.scss" as *;
-@use "@/assets/styles/mixins.scss" as *;
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
 
 .dropdown-item {
   display: flex;
@@ -38,14 +38,14 @@
     will-change: transform;
 
     &::before {
-      content: "";
+      content: '';
       width: 24px;
       height: 1px;
       background-color: $main_purple;
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 24px;
       height: 1px;
@@ -80,12 +80,11 @@
   &__item {
     padding-left: 24px;
     text-indent: -22px;
-    color: $text_primary;
-    font-size: 16px;
-    font-weight: 400;
     list-style-type: disc;
     list-style-position: inside;
     gap: 8px;
+
+    @include font_16_400;
 
     > .dropdown-item__list {
       > .dropdown-item__item:first-child {

@@ -28,7 +28,13 @@
   }
 }
 
-@mixin font_text_primary {
+@mixin font_16_400 {
+  color: $text_primary;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin font_20_400 {
   color: $text_primary;
   font-size: 16px;
   font-weight: 400;

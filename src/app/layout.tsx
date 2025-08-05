@@ -4,6 +4,7 @@ import AppProvider from '@/shared/providers/AppProvider';
 import Header from '@/components/header/Header';
 import HeaderDropdownMenu from '@/components/header/DropdownMenu';
 import Modals from '@/components/modals/Modals';
+import Footer from '@/components/footer/Footer';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({
           <HeaderDropdownMenu />
           <Modals />
           {children}
+          <Footer />
         </AppProvider>
       </body>
     </html>

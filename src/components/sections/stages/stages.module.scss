@@ -1,49 +1,45 @@
-@use "@/assets/styles/variables.scss" as *;
-@use "@/assets/styles/mixins.scss" as *;
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
 
 .stages {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding-bottom: 96px;
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 96px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 
-    @include mediaTablet {
-        gap: 64px;
-        padding-bottom: 144px;
+  @include mediaTablet {
+    gap: 64px;
+    padding-bottom: 144px;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &__title {
+    color: $main_purple;
+
+    @include font_title;
+  }
+
+  &__icon {
+    position: absolute;
+    display: none;
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    right: 140px;
+    transform: translateY(-50%);
+
+    @include mediaLaptop {
+      display: flex;
     }
 
-    &.visible {
-        opacity: 1;
+    @include mediaDesktop {
+      right: 230px;
     }
-
-    &__title {
-        color: $main_purple;
-        font-size: 36px;
-        font-weight: 600;
-
-        @include mediaTablet {
-            font-size: 54px;
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        display: none;
-        width: 160px;
-        height: 160px;
-        top: 50%;
-        right: 140px;
-        transform: translateY(-50%);
-
-        @include mediaLaptop {
-            display: flex;
-        }
-
-        @include mediaDesktop {
-            right: 230px;
-        }
-    }
+  }
 }
