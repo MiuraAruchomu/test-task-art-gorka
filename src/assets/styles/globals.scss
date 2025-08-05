@@ -1,9 +1,22 @@
-@use "@/assets/styles/variables.scss" as *;
-@use "@/assets/styles/mixins.scss" as *;
+@use '@/assets/styles/variables.scss' as *;
+@use '@/assets/styles/mixins.scss' as *;
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  position: relative;
+  padding-bottom: 150px;
+
+  @include mediaTablet {
+    padding-bottom: 155px;
+  }
+
+  @include mediaLaptop {
+    padding-bottom: 106px;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -39,7 +52,7 @@ textarea {
   text-transform: inherit;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   appearance: none;
 }
 
@@ -66,7 +79,6 @@ button:focus {
 a {
   color: $white;
   text-decoration: none;
-  white-space: nowrap;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -97,7 +109,7 @@ label {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: 0;

@@ -2,8 +2,18 @@
 @use '@/assets/styles/mixins.scss' as *;
 
 .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 40px 0;
   background-color: $main_grey_light;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  &.visible {
+    opacity: 1;
+  }
 
   &__inner {
     display: flex;
