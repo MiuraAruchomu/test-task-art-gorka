@@ -7,7 +7,7 @@ export default function AnotherSwiperMobile({
 }: IAnotherCustomSwiperProps) {
   return (
     <Swiper
-      spaceBetween={5}
+      spaceBetween={8}
       slidesPerView={'auto'}
       scrollbar={false}
       className={'another-swiper-mobile'}

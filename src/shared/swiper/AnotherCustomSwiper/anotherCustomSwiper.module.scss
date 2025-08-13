@@ -2,10 +2,10 @@
 @use '@/assets/styles/mixins.scss' as *;
 
 .another-custom-swiper {
-  margin-top: 52px;
+  margin-top: 48px;
 
   @include mediaTablet {
-    margin-top: 74px;
+    margin-top: 80px;
   }
 
   @include mediaLaptop {

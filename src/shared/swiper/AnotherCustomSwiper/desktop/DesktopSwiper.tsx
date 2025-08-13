@@ -7,7 +7,7 @@ export default function AnotherSwiperDesktop({
 }: IAnotherCustomSwiperProps) {
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={8}
       slidesPerView={2}
       scrollbar={false}
       className={'another-swiper-desktop'}
