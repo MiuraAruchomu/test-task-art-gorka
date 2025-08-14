@@ -1,5 +1,10 @@
 import styles from './wrapper.module.scss';
-import { IButtonWrapperProps } from './button.interface';
+
+export interface IButtonWrapperProps {
+  type: string;
+  size: string;
+  children: React.ReactNode;
+}
 
 export default function UiButtonWrapper({
   type,

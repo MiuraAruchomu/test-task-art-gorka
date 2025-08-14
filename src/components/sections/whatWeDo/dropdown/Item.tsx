@@ -1,7 +1,11 @@
 import styles from './styles/item.module.scss';
-import { IWhatWeDoDropdownItemProps } from '../whatWeDo.interface';
+import { TDropdownItem } from './List';
 import { useState, useRef, useEffect } from 'react';
-import { TDropdownItem } from '../whatWeDo.type';
+
+interface IWhatWeDoDropdownItemProps {
+  name: string;
+  content: TDropdownItem[];
+}
 
 export default function WhatWeDoDropdownItem({
   name,

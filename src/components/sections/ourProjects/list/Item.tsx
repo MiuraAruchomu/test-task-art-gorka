@@ -1,5 +1,12 @@
 import styles from './styles/item.module.scss';
-import { IOurProjectsListItemProps } from '../ourProjects.interface';
+
+export interface IOurProjectsListItemProps {
+  imgPath: string;
+  title: string;
+  filters: string[];
+  linkName: string;
+  linkPath: string;
+}
 
 export default function OurProjectsListItem({
   imgPath,

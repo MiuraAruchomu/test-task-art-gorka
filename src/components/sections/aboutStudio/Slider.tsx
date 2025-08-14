@@ -1,6 +1,17 @@
-import { ABOUT_STUDIO_SLIDER } from './slider.config';
-import AnotherCustomSwiper from '@/shared/swiper/AnotherCustomSwiper/AnotherCustomSwiper';
+import AnotherCustomSwiper from '@/components/swiper/AnotherCustomSwiper/AnotherCustomSwiper';
+
+const sliderItems = [
+  {
+    imgPath: '/img/another-slide-image-1.png',
+  },
+  {
+    imgPath: '/img/another-slide-image-2.png',
+  },
+  {
+    imgPath: '/img/another-slide-image-3.png',
+  },
+];
 
 export default function AboutStudioSlider() {
-  return <AnotherCustomSwiper config={ABOUT_STUDIO_SLIDER} />;
+  return <AnotherCustomSwiper config={sliderItems} />;
 }

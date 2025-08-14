@@ -1,6 +1,6 @@
 import styles from './styles/dropdownMenuButtons.module.scss';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { openModal } from '@/features/modals/modalsSlice';
+import { openModal } from '@/slices/modals/modalsSlice';
 import UiButtonWrapper from '../ui/button/Wrapper';
 
 export default function DropdownMenuButtons() {

@@ -1,9 +1,9 @@
 'use client';
 
 import styles from './styles/dropdownMenu.module.scss';
-import { HEADER_LINKS } from './header.config';
+import { ROUTES } from '@/constants/routes';
 import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectIsDropdownMenuOpen } from '@/features/header/selectors';
+import { selectIsDropdownMenuOpen } from '@/slices/header/selectors';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import DropdownMenuButtons from './DropdownMenuButtons';
@@ -24,14 +24,14 @@ export default function HeaderDropdownMenu() {
       className={`${styles['header-dropdown-menu']} ${isVisible ? styles['visible'] : ''}`}
     >
       <ul className={styles['header-dropdown-menu__list']}>
-        {HEADER_LINKS &&
-          HEADER_LINKS.map((link) => (
-            <li key={link.linkName}>
+        {ROUTES &&
+          ROUTES.map((route) => (
+            <li key={route.name}>
               <Link
-                href={link.linkPath}
+                href={route.path}
                 className={styles['header-dropdown-menu__item']}
               >
-                {link.linkName}
+                {route.name}
               </Link>
             </li>
           ))}

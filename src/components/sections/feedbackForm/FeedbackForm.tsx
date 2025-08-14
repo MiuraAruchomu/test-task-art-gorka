@@ -1,6 +1,6 @@
 import styles from './feedbackForm.module.scss';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { openModal } from '@/features/modals/modalsSlice';
+import { openModal } from '@/slices/modals/modalsSlice';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';

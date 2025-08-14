@@ -1,7 +1,12 @@
-import { IOurProjectButtonProps } from '../ourProjects.interface';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { filterProjects } from '@/features/ourProjects/ourProjectsSlice';
+import { filterProjects } from '@/slices/ourProjects/ourProjectsSlice';
 import UiButtonWrapper from '@/components/ui/button/Wrapper';
+
+interface IOurProjectButtonProps {
+  name: string;
+  activeButton: string;
+  setActiveButton: (name: string) => void;
+}
 
 export default function OurProjectsButton({
   name,

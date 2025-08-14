@@ -2,7 +2,7 @@
 
 import styles from './styles/header.module.scss';
 import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectIsDropdownMenuOpen } from '@/features/header/selectors';
+import { selectIsDropdownMenuOpen } from '@/slices/header/selectors';
 import HeaderLogo from './Logo';
 import HeaderDesktopMenu from './DesktopMenu';
 import HeaderButtons from './HeaderButtons';

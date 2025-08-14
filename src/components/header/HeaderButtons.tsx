@@ -1,7 +1,7 @@
 import styles from './styles/headerButtons.module.scss';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
 import UiButtonWrapper from '../ui/button/Wrapper';
-import { openModal } from '@/features/modals/modalsSlice';
+import { openModal } from '@/slices/modals/modalsSlice';
 
 export default function HeaderButtons() {
   const dispatch = useAppDispatch();
