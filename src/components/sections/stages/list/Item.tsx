@@ -1,9 +1,15 @@
 import styles from './styles/item.module.scss';
-import { IStagesListItemProps } from '../stages.interface';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { changeCurrentStage } from '@/features/stages/stagesSlice';
+import { changeCurrentStage } from '@/slices/stages/stagesSlice';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+
+interface IStagesListItemProps {
+  index: number;
+  title: string;
+  becameVisible: boolean;
+  children: React.ReactNode;
+}
 
 export default function StagesListItem({
   index,

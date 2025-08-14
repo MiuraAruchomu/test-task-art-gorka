@@ -1,9 +1,21 @@
 import styles from './styles/contactUs.module.scss';
-import { CONTACT_PERSONS } from './contactUs.config';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import CopyToClipboard from '@/components/copyToClipboard/CopyToClipboard';
 import ContactPerson from './Person';
+
+const contactUsPersons = [
+  {
+    imgPath: '/img/contact-person-1.jpg',
+    phone: '8 (999) 999 99 99',
+    name: 'Константин',
+  },
+  {
+    imgPath: '/img/contact-person-2.jpg',
+    phone: '8 (999) 999 99 99',
+    name: 'Александр',
+  },
+];
 
 export default function ContactUs() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +42,8 @@ export default function ContactUs() {
         </p>
         <div className={styles['contact-us__info']}>
           <div className={styles['contact-us__persons']}>
-            {CONTACT_PERSONS &&
-              CONTACT_PERSONS.map((person) => (
+            {contactUsPersons &&
+              contactUsPersons.map((person) => (
                 <ContactPerson
                   key={person.name}
                   imgPath={person.imgPath}

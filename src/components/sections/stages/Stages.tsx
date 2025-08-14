@@ -1,6 +1,6 @@
 import styles from './stages.module.scss';
 import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectCurrentStage } from '@/features/stages/selectors';
+import { selectCurrentStage } from '@/slices/stages/selectors';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import StagesList from './list/List';

@@ -1,5 +1,9 @@
 import styles from './styles/item.module.scss';
-import { IAboutStudioInfoItemProps } from '../aboutStudio.interface';
+
+interface IAboutStudioInfoItemProps {
+  title: string;
+  subtitle: string;
+}
 
 export default function AboutStudioInfoitem({
   title,

@@ -1,8 +1,8 @@
 import styles from './leaveRequest.module.scss';
-import { TModalClose } from '@/features/modals/modals.type';
+import { TModalClose } from '@/slices/modals/modalsSlice';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeDropdownMenu } from '@/features/header/headerSlice';
-import { closeModal, openModal } from '@/features/modals/modalsSlice';
+import { closeDropdownMenu } from '@/slices/header/headerSlice';
+import { closeModal, openModal } from '@/slices/modals/modalsSlice';
 import { useState } from 'react';
 import Link from 'next/link';
 import CloseButton from '../CloseButton';

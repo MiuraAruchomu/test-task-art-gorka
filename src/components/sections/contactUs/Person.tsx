@@ -1,5 +1,10 @@
 import styles from './styles/person.module.scss';
-import { IContactPersonProps } from './contactUs.interface';
+
+interface IContactPersonProps {
+  imgPath: string;
+  phone: string;
+  name: string;
+}
 
 export default function ContactPerson({
   imgPath,

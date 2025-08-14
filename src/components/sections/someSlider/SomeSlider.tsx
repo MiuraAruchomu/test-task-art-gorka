@@ -1,8 +1,31 @@
 import styles from './someSlider.module.scss';
-import { SOME_SLIDER } from './someSlider.config';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import SomeCustomSwiper from '@/shared/swiper/someCustomSwiper/SomeCustomSwiper';
+import SomeCustomSwiper from '@/components/swiper/someCustomSwiper/SomeCustomSwiper';
+
+const sliderItems = [
+  {
+    imgPath: '/img/slide-image.png',
+    title: 'Какой-то слайдер',
+    description: 'Какое-то описание чего-то там, бла-бла-бла',
+    linkName: 'Перейти куда-то',
+    linkPath: '#',
+  },
+  {
+    imgPath: '/img/slide-image.png',
+    title: 'Какой-то слайдер',
+    description: 'Какое-то описание чего-то там, бла-бла-бла',
+    linkName: 'Перейти куда-то',
+    linkPath: '#',
+  },
+  {
+    imgPath: '/img/slide-image.png',
+    title: 'Какой-то слайдер',
+    description: 'Какое-то описание чего-то там, бла-бла-бла',
+    linkName: 'Перейти куда-то',
+    linkPath: '#',
+  },
+];
 
 export default function SomeSlider() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +46,7 @@ export default function SomeSlider() {
       className={`${styles['some-slider']} ${isVisible ? styles.visible : ''}`}
     >
       <div className='container'>
-        <SomeCustomSwiper config={SOME_SLIDER} />
+        <SomeCustomSwiper config={sliderItems} />
       </div>
     </section>
   );

@@ -1,5 +1,9 @@
 import styles from './styles/item.module.scss';
-import { IProductsItemProps } from './products.interface';
+
+interface IProductsItemProps {
+  path: string;
+  title: string;
+}
 
 export default function ProductsItem({ path, title }: IProductsItemProps) {
   return (

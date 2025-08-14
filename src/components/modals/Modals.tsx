@@ -1,6 +1,6 @@
 'use client';
 
-import { selectActiveModals } from '@/features/modals/selectors';
+import { selectActiveModals } from '@/slices/modals/selectors';
 import { useAppSelector } from '@/shared/hooks/useAppSelector';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';

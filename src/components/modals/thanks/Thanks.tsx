@@ -1,7 +1,7 @@
 import styles from './thanks.module.scss';
-import { TModalClose } from '@/features/modals/modals.type';
+import { TModalClose } from '@/slices/modals/modalsSlice';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeModal } from '@/features/modals/modalsSlice';
+import { closeModal } from '@/slices/modals/modalsSlice';
 import UiButtonWrapper from '@/components/ui/button/Wrapper';
 import CloseButton from '../CloseButton';
 

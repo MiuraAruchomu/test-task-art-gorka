@@ -1,6 +1,6 @@
 import '@/assets/styles/globals.scss';
 import { Onest } from 'next/font/google';
-import AppProvider from '@/shared/providers/AppProvider';
+import AppProvider from '@/providers/AppProvider';
 import Header from '@/components/header/Header';
 import HeaderDropdownMenu from '@/components/header/DropdownMenu';
 import Modals from '@/components/modals/Modals';
