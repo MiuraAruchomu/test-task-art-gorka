@@ -1,8 +1,14 @@
 import styles from './styles/aboutUs.module.scss';
-import { ABOUT_US } from './aboutUs.config';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import AboutUsBlock from './Block';
+
+const ABOUT_US = [
+  'Небольшая и дружная команда специалистов, не держим у себя лишних людей',
+  'Настроены на долгосрочные отношения с клиентами',
+  'Здравый смысл в работе — наше всё',
+  'Прозрачный и понятный процесс работы',
+];
 
 export default function AboutUs() {
   const [isVisible, setIsVisible] = useState(false);

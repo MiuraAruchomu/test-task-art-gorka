@@ -3,7 +3,7 @@
 import styles from './testTask.module.scss';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import UiButton from '@/components/ui/button/Button';
 
 export default function TestTask() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,12 +36,8 @@ export default function TestTask() {
         </a>
       </p>
       <div className={styles['test-task__buttons']}>
-        <UiButtonWrapper type={'fill'} size={'medium'}>
-          <button>Нажми меня</button>
-        </UiButtonWrapper>
-        <UiButtonWrapper type={'outline'} size={'medium'}>
-          <button>Меня тоже нажми</button>
-        </UiButtonWrapper>
+        <UiButton name={'Нажми меня'} type={'fill'} size={'medium'} />
+        <UiButton name={'Меня тоже нажми'} type={'outline'} size={'medium'} />
       </div>
     </section>
   );

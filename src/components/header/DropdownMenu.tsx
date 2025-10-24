@@ -1,12 +1,30 @@
 'use client';
 
 import styles from './styles/dropdownMenu.module.scss';
-import { ROUTES } from '@/constants/routes';
-import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectIsDropdownMenuOpen } from '@/slices/header/selectors';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { selectIsDropdownMenuOpen } from '@/store/slices/header/selectors';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import DropdownMenuButtons from './DropdownMenuButtons';
+
+export const ROUTES = [
+  {
+    name: 'Студия',
+    path: '#',
+  },
+  {
+    name: 'Проекты',
+    path: '#',
+  },
+  {
+    name: 'Услуги',
+    path: '#',
+  },
+  {
+    name: 'Контакты',
+    path: '#',
+  },
+];
 
 export default function HeaderDropdownMenu() {
   const isVisible = useAppSelector(selectIsDropdownMenuOpen);

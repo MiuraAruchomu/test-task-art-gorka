@@ -1,4 +1,4 @@
-import { IProject } from '@/slices/ourProjects/ourProjectsSlice';
+import { IProject } from '@/store/slices/ourProjects/ourProjectsSlice';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const getProjects = createAsyncThunk<IProject[]>(

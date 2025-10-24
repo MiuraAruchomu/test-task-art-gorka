@@ -1,8 +1,8 @@
 import styles from './styles/burgerMenu.module.scss';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectIsDropdownMenuOpen } from '@/slices/header/selectors';
-import { toggleDropdownMenu } from '@/slices/header/headerSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { selectIsDropdownMenuOpen } from '@/store/slices/header/selectors';
+import { toggleDropdownMenu } from '@/store/slices/header/headerSlice';
 
 export default function HeaderBurgerMenu() {
   const dispatch = useAppDispatch();

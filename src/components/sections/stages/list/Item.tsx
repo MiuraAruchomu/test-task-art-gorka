@@ -1,6 +1,6 @@
 import styles from './styles/item.module.scss';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { changeCurrentStage } from '@/slices/stages/stagesSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { changeCurrentStage } from '@/store/slices/stages/stagesSlice';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 

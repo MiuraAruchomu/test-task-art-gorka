@@ -1,5 +1,5 @@
 import styles from './styles/header.module.scss';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import UiButton from '@/components/ui/button/Button';
 
 export default function AboutStudioHeader() {
   return (
@@ -16,7 +16,7 @@ export default function AboutStudioHeader() {
           на аналитику и юзабилити.
         </p>
       </div>
-      <UiButtonWrapper type={'outline'} size={'medium'}>
+      <UiButton type={'outline'} size={'medium'}>
         <button
           onClick={() =>
             window.open(
@@ -28,7 +28,7 @@ export default function AboutStudioHeader() {
         >
           Перейти на сайт студии
         </button>
-      </UiButtonWrapper>
+      </UiButton>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 @use "@/assets/styles/variables.scss" as *;
 
-.ui-input-wrapper-dark {
+.ui-input-dark {
   position: relative;
   display: flex;
   padding: 19px 24px;
@@ -38,7 +38,7 @@
     box-shadow: inset 0 0 0 1px $main_purple;
     background-color: $main_grey_light;
 
-    .ui-input-wrapper-dark__placeholder {
+    .ui-input-dark__placeholder {
       opacity: 0;
       visibility: hidden;
     }
@@ -51,7 +51,7 @@
   }
 }
 
-.ui-input-wrapper-light {
+.ui-input-light {
   position: relative;
   display: flex;
   padding: 19px 24px;
@@ -90,7 +90,7 @@
     box-shadow: inset 0 0 0 1px $white;
     background-color: $main_purple_dark;
 
-    .ui-input-wrapper-light__placeholder {
+    .ui-input-light__placeholder {
       opacity: 0;
       visibility: hidden;
     }

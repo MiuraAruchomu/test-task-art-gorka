@@ -1,6 +1,24 @@
 import styles from './styles/desktopMenu.module.scss';
-import { ROUTES } from '@/constants/routes';
 import Link from 'next/link';
+
+export const ROUTES = [
+  {
+    name: 'Студия',
+    path: '#',
+  },
+  {
+    name: 'Проекты',
+    path: '#',
+  },
+  {
+    name: 'Услуги',
+    path: '#',
+  },
+  {
+    name: 'Контакты',
+    path: '#',
+  },
+];
 
 export default function HeaderDesktopMenu() {
   return (
