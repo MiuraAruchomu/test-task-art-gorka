@@ -1,8 +1,8 @@
 'use client';
 
 import styles from './ourProjects.module.scss';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { getProjects } from '@/slices/ourProjects/ourProjectsThunks';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { getProjects } from '@/store/slices/ourProjects/ourProjectsThunks';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import OurProjectsButtons from './buttons/Buttons';

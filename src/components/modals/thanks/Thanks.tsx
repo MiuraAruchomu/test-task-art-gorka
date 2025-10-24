@@ -1,8 +1,8 @@
 import styles from './thanks.module.scss';
-import { TModalClose } from '@/slices/modals/modalsSlice';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeModal } from '@/slices/modals/modalsSlice';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import { TModalClose } from '@/store/slices/modals/modalsSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { closeModal } from '@/store/slices/modals/modalsSlice';
+import UiButton from '@/components/ui/button/Button';
 import CloseButton from '../CloseButton';
 
 export default function Thanks({ modalClose }: { modalClose: TModalClose }) {
@@ -23,10 +23,11 @@ export default function Thanks({ modalClose }: { modalClose: TModalClose }) {
         <p className={styles['modal-thanks__subtitle']}>
           Наш менеджер свяжется с вами в ближайшее время с 09:00 до 19:00
         </p>
-        <UiButtonWrapper
+        <UiButton
+          name={'Хорошо, закрыть'}
           type={'fill-rounded'}
           size={'small'}
-          children={<button onClick={handleClose}>Хорошо, закрыть</button>}
+          onClick={handleClose}
         />
       </div>
     </div>

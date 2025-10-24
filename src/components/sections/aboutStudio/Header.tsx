@@ -1,7 +1,15 @@
 import styles from './styles/header.module.scss';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import UiButton from '@/components/ui/button/Button';
 
 export default function AboutStudioHeader() {
+  const handleClick = () => {
+    return window.open(
+      'https://artgorka.ru/',
+      '_blank',
+      'noopener, noreferrer',
+    );
+  };
+
   return (
     <div className={`${styles['about-studio-header']}`}>
       <div className={styles['about-studio-header__top']}>
@@ -16,19 +24,12 @@ export default function AboutStudioHeader() {
           на аналитику и юзабилити.
         </p>
       </div>
-      <UiButtonWrapper type={'outline'} size={'medium'}>
-        <button
-          onClick={() =>
-            window.open(
-              'https://artgorka.ru/',
-              '_blank',
-              'noopener, noreferrer',
-            )
-          }
-        >
-          Перейти на сайт студии
-        </button>
-      </UiButtonWrapper>
+      <UiButton
+        name={'Перейти на сайт студии'}
+        type={'outline'}
+        size={'medium'}
+        onClick={handleClick}
+      />
     </div>
   );
 }

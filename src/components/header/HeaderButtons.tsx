@@ -1,21 +1,24 @@
 import styles from './styles/headerButtons.module.scss';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import UiButtonWrapper from '../ui/button/Wrapper';
-import { openModal } from '@/slices/modals/modalsSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import UiButton from '../ui/button/Button';
+import { openModal } from '@/store/slices/modals/modalsSlice';
 
 export default function HeaderButtons() {
   const dispatch = useAppDispatch();
 
+  const handleClick = () => {
+    dispatch(openModal('leave-request'));
+  };
+
   return (
     <div className={styles['header-buttons']}>
-      <UiButtonWrapper type={'text'} size={'medium'}>
-        <button>8 800 222 86 84</button>
-      </UiButtonWrapper>
-      <UiButtonWrapper type={'outline'} size={'medium'}>
-        <button onClick={() => dispatch(openModal('leave-request'))}>
-          Обсудить проект
-        </button>
-      </UiButtonWrapper>
+      <UiButton name={'8 800 222 86 84'} type={'text'} size={'medium'} />
+      <UiButton
+        name={'Обсудить проект'}
+        type={'outline'}
+        size={'medium'}
+        onClick={handleClick}
+      />
     </div>
   );
 }

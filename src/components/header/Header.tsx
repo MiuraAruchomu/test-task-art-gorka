@@ -1,8 +1,8 @@
 'use client';
 
 import styles from './styles/header.module.scss';
-import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectIsDropdownMenuOpen } from '@/slices/header/selectors';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { selectIsDropdownMenuOpen } from '@/store/slices/header/selectors';
 import HeaderLogo from './Logo';
 import HeaderDesktopMenu from './DesktopMenu';
 import HeaderButtons from './HeaderButtons';

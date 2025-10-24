@@ -1,10 +1,10 @@
 import styles from './ThanksForRequest.module.scss';
-import { TModalClose } from '@/slices/modals/modalsSlice';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeDropdownMenu } from '@/slices/header/headerSlice';
-import { closeModal } from '@/slices/modals/modalsSlice';
+import { TModalClose } from '@/store/slices/modals/modalsSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { closeDropdownMenu } from '@/store/slices/header/headerSlice';
+import { closeModal } from '@/store/slices/modals/modalsSlice';
 import CloseButton from '../CloseButton';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import UiButton from '@/components/ui/button/Button';
 
 export default function ThanksForRequest({
   modalClose,
@@ -34,10 +34,11 @@ export default function ThanksForRequest({
         <p className={styles['modal-thanks-for-request__subtitle']}>
           Мы уже получили вашу заявку, свяжемся с вами в течение дня
         </p>
-        <UiButtonWrapper
+        <UiButton
+          name={'Хорошо, закрыть'}
           type={'fill'}
           size={'full'}
-          children={<button onClick={handleClose}>Хорошо, закрыть</button>}
+          onClick={handleClose}
         />
       </div>
     </div>

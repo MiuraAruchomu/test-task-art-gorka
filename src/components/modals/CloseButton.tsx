@@ -1,8 +1,8 @@
 import styles from './closeButton.module.scss';
-import { TModalClose } from '@/slices/modals/modalsSlice';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeDropdownMenu } from '@/slices/header/headerSlice';
-import { closeModal } from '@/slices/modals/modalsSlice';
+import { TModalClose } from '@/store/slices/modals/modalsSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { closeDropdownMenu } from '@/store/slices/header/headerSlice';
+import { closeModal } from '@/store/slices/modals/modalsSlice';
 
 export default function CloseButton({
   modalClose,

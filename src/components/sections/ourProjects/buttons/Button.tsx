@@ -1,6 +1,6 @@
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { filterProjects } from '@/slices/ourProjects/ourProjectsSlice';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { filterProjects } from '@/store/slices/ourProjects/ourProjectsSlice';
+import UiButton from '@/components/ui/button/Button';
 
 interface IOurProjectButtonProps {
   name: string;
@@ -21,14 +21,11 @@ export default function OurProjectsButton({
   };
 
   return (
-    <UiButtonWrapper
+    <UiButton
+      name={name}
       type={activeButton === name ? 'fill-rounded' : 'outline-rounded'}
       size={'small'}
-      children={
-        <button style={{ whiteSpace: 'nowrap' }} onClick={handleClick}>
-          {name}
-        </button>
-      }
+      onClick={handleClick}
     />
   );
 }

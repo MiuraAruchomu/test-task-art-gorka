@@ -1,6 +1,6 @@
 import styles from './styles/list.module.scss';
-import { useAppSelector } from '@/shared/hooks/useAppSelector';
-import { selectFilteredProjects } from '@/slices/ourProjects/selectors';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { selectFilteredProjects } from '@/store/slices/ourProjects/selectors';
 import OurProjectsListItem from './Item';
 
 export default function OurProjectsList() {

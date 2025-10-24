@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import headerReducer from '@/slices/header/headerSlice';
-import modalsReducer from '@/slices/modals/modalsSlice';
-import ourProjectsReducer from '@/slices/ourProjects/ourProjectsSlice';
-import stagesReducer from '@/slices/stages/stagesSlice';
+import headerReducer from './slices/header/headerSlice';
+import modalsReducer from './slices/modals/modalsSlice';
+import ourProjectsReducer from './slices/ourProjects/ourProjectsSlice';
+import stagesReducer from './slices/stages/stagesSlice';
 
 export const makeStore = () => {
   return configureStore({

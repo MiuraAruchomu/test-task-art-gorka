@@ -1,36 +1,40 @@
 import styles from './leaveRequest.module.scss';
-import { TModalClose } from '@/slices/modals/modalsSlice';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch';
-import { closeDropdownMenu } from '@/slices/header/headerSlice';
-import { closeModal, openModal } from '@/slices/modals/modalsSlice';
-import { useState } from 'react';
+import { TModalClose } from '@/store/slices/modals/modalsSlice';
+import { useAppDispatch } from '@/hooks/useAppDispatch';
+import { closeDropdownMenu } from '@/store/slices/header/headerSlice';
+import { closeModal, openModal } from '@/store/slices/modals/modalsSlice';
 import Link from 'next/link';
 import CloseButton from '../CloseButton';
-import UiInputWrapper from '@/components/ui/input/Wrapper';
-import UiButtonWrapper from '@/components/ui/button/Wrapper';
+import UiInput from '@/components/ui/input/Input';
+import UiTextarea from '@/components/ui/textarea/Textarea';
+import UiButton from '@/components/ui/button/Button';
+import { useFormState } from '@/hooks/useFormState';
+import { validatePhoneNumber } from '@/utils/form-validation';
+
+const initialState = {
+  name: '',
+  phone: '',
+  email: '',
+  message: '',
+};
+
+const validateFn = ({ name, phone, email, message }: typeof initialState) => {
+  const errors: Partial<Record<keyof typeof initialState, string>> = {};
+  const phoneErr = validatePhoneNumber(phone);
+
+  if (phoneErr) errors.phone = phoneErr;
+
+  return errors;
+};
 
 export default function LeaveRequest({
   modalClose,
 }: {
   modalClose: TModalClose;
 }) {
+  const { formState, formErrors, setValue, handleSubmit, resetError } =
+    useFormState({ initialState, validateFn, submitFn });
   const dispatch = useAppDispatch();
-
-  const [config, setConfig] = useState({});
-  const [error, setError] = useState<string | null>(
-    'Поле заполнено некорректно',
-  );
-
-  const updateConfig = ({ field, value }: { field: string; value: string }) => {
-    setConfig((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
-
-  const updateError = (value: string | null) => {
-    setError(value);
-  };
 
   const handleClose = () => {
     if (modalClose === 'thanks-for-request') {
@@ -40,12 +44,12 @@ export default function LeaveRequest({
     dispatch(closeModal(modalClose));
   };
 
-  const onSubmit = (e: any) => {
-    e.preventDefault();
-    if (error) return;
+  async function submitFn() {
     dispatch(closeModal(modalClose));
     dispatch(openModal('thanks-for-request'));
-  };
+    // Имитация асинхронного запроса
+    Promise.resolve();
+  }
 
   return (
     <div className={styles['modal-leave-request']} onClick={handleClose}>
@@ -60,52 +64,53 @@ export default function LeaveRequest({
         <p className={styles['modal-leave-request__subtitle']}>
           Заполните форму, и наш менеджер свяжется с вами
         </p>
-        <form
-          className={styles['modal-leave-request__form']}
-          onSubmit={onSubmit}
-        >
-          <UiInputWrapper
-            type={'dark'}
-            field={'name'}
+        <form className={styles['modal-leave-request__form']}>
+          <UiInput
+            name={'name'}
+            theme={'dark'}
             placeholder={'Имя'}
             required={false}
-            updateConfig={updateConfig}
-            updateError={updateError}
-            children={<input name='name' />}
+            value={formState.name}
+            setValue={setValue}
+            error={formErrors.name}
+            resetError={resetError}
           />
-          <UiInputWrapper
-            type={'dark'}
-            field={'phone'}
+          <UiInput
+            name={'phone'}
+            theme={'dark'}
             placeholder={'Телефон'}
             required={true}
-            updateConfig={updateConfig}
-            updateError={updateError}
-            children={<input name='phone' />}
+            value={formState.phone}
+            setValue={setValue}
+            error={formErrors.phone}
+            resetError={resetError}
           />
-          <UiInputWrapper
-            type={'dark'}
-            field={'email'}
+          <UiInput
+            name={'email'}
+            theme={'dark'}
             placeholder={'Email'}
             required={false}
-            updateConfig={updateConfig}
-            updateError={updateError}
-            children={<input name='email' />}
+            value={formState.email}
+            setValue={setValue}
+            error={formErrors.email}
+            resetError={resetError}
           />
-          <UiInputWrapper
-            type={'dark'}
-            field={'message'}
+          <UiTextarea
+            name={'message'}
+            theme={'dark'}
+            height={'medium'}
             placeholder={'Опишите ваш запрос'}
             required={false}
-            updateConfig={updateConfig}
-            updateError={updateError}
-            children={
-              <textarea className={styles['modal-leave-request__textarea']} />
-            }
+            value={formState.message}
+            setValue={setValue}
+            error={formErrors.message}
+            resetError={resetError}
           />
-          <UiButtonWrapper
+          <UiButton
+            name={'Отправить'}
             type={'fill'}
             size={'full'}
-            children={<button>Отправить</button>}
+            onClick={handleSubmit}
           />
           <span className={styles['modal-leave-request__privacy-notice']}>
             Нажимая кнопку «Отправить» вы соглашаетесь на 
